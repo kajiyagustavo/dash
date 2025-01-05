@@ -26,7 +26,7 @@ if uploaded_files:
     dataframes = []
     for file in uploaded_files:
         if file.name.endswith('.csv'):
-            df = pd.read_csv(file, encoding='utf-8')
+            df = pd.read_csv(file, encoding='utf-8', low_memory=False)
         elif file.name.endswith('.xlsx'):
             df = pd.read_excel(file)
         dataframes.append(df)
