@@ -1,4 +1,5 @@
 import streamlit as st
+st.set_option('server.maxUploadSize', 2048)  # Define o limite máximo para 2 GB
 import pandas as pd
 from datetime import datetime
 from dateutil.relativedelta import relativedelta
